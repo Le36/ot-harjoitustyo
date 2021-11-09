@@ -1,6 +1,6 @@
 # OT-harjoitystyö #
 
-tee tiedostoon esim. jokin otsikko, tavallista tekstiä, joka sisältää **lihavoituja** ja *kursivoituja* osuuksia
+Tee tiedostoon esim. jokin otsikko, tavallista tekstiä, joka sisältää **lihavoituja** ja *kursivoituja* osuuksia.
 
 ## viikko 1 ##
 
