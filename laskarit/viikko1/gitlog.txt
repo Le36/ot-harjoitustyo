@@ -1,0 +1,28 @@
+commit 6ab937ddcdcb1069aa1ea7a2f996ef917fb2dc2b
+Author: Le36 <45509733+Le36@users.noreply.github.com>
+Date:   Tue Nov 9 20:15:48 2021 +0200
+
+    muutokset
+
+ tiedostoja/file1  | 1 -
+ tiedostoja/file2  | 1 -
+ tiedostoja/file22 | 1 +
+ tiedostoja/file3  | 2 +-
+ 4 files changed, 2 insertions(+), 3 deletions(-)
+
+commit 8dc5cfb860b967e082783aa3d09d00eba2dc4422
+Author: Le36 <45509733+Le36@users.noreply.github.com>
+Date:   Tue Nov 9 20:14:27 2021 +0200
+
+    3 tiedostoa
+
+ tiedostoja/file1 | 1 +
+ tiedostoja/file2 | 1 +
+ tiedostoja/file3 | 1 +
+ 3 files changed, 3 insertions(+)
+
+commit 0f8f23ed882c6a3547426117beb8d53a972ddf2b
+Author: Le36 <45509733+Le36@users.noreply.github.com>
+Date:   Tue Nov 9 20:09:48 2021 +0200
+
+    muutoksi
