@@ -31,4 +31,13 @@ public class MaksukorttiTest {
     public void hello() {
     }
 
+    @Test
+    public void konstruktoriAsettaaSaldonOikein() {
+        Maksukortti kortti = new Maksukortti(10);
+
+        String vastaus = kortti.toString();
+
+        assertEquals("Kortilla on rahaa 9.0 euroa", vastaus);
+    }
+
 }
