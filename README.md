@@ -8,3 +8,7 @@ Tee tiedostoon esim. jokin otsikko, tavallista tekstiä, joka sisältää **liha
 
 
 [komentorivi.txt](https://github.com/Le36/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+
+## viikko 2 ##
+
+[kattavuusraportti.png](https://github.com/Le36/ot-harjoitustyo/blob/main/laskarit/viikko2/kattavuusraportti.png)
