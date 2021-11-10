@@ -1,6 +1,10 @@
 # OT-harjoitystyö #
 
-Tee tiedostoon esim. jokin otsikko, tavallista tekstiä, joka sisältää **lihavoituja** ja *kursivoituja* osuuksia.
+**CHIP-8** *Emulator*
+
+## Dokumentaatio ##
+
+[Vaatimusmäärittely](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
 
 ## viikko 1 ##
 
