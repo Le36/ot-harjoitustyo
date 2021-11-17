@@ -8,5 +8,7 @@ public class Main {
 
         loader.readFile();
         loader.loadToMemory();
+
+        loader.hexDump();
     }
 }

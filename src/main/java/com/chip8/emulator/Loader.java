@@ -1,7 +1,11 @@
 package com.chip8.emulator;
 
+import org.apache.commons.io.HexDump;
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.file.Files;
 
 public class Loader {
@@ -31,6 +35,16 @@ public class Loader {
             address++;
             //System.out.println(address);
         }
+    }
+
+    public void hexDump() {
+        OutputStream os = new ByteArrayOutputStream();
+        try {
+            HexDump.dump(bytes, 0, os, 0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(os);
     }
 
 }
