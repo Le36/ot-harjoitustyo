@@ -2,17 +2,24 @@
 
 **CHIP-8** *Emulator*
 
+## Komentorivitoiminnot ##
+
+### Sovelluksen käynnistäminen
+Sovelluksen voi käynnistää komennolla
+
+```
+mvn compile exec:java -Dexec.mainClass=com.chip8.emulator.Main
+```
+
+### Testaus
+Testit suoritetaan komennolla
+```
+mvn test
+```
+
+
 ## Dokumentaatio ##
 
 [Vaatimusmäärittely](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
 
-## viikko 1 ##
-
-[gitlog.txt](https://github.com/Le36/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
-
-
-[komentorivi.txt](https://github.com/Le36/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
-
-## viikko 2 ##
-
-[kattavuusraportti.png](https://github.com/Le36/ot-harjoitustyo/blob/main/laskarit/viikko2/kattavuusraportti.png)
+[Työaikakirjanpito](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
