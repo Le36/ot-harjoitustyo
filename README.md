@@ -2,6 +2,8 @@
 
 **CHIP-8** *Emulator*
 
+Tällä hetkellä emulaattoriin implementoitu muutamat opcodet, toimii testi rom "IBM" projektin juuressa, jonka funktio on tulostaa näytölle IBM-logo.
+
 ## Komentorivitoiminnot ##
 
 ### Sovelluksen käynnistäminen
