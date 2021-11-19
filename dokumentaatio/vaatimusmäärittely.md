@@ -6,9 +6,9 @@ Sovelluksen tarkoitus on olla Chip-8 emulaattori. Ohjelmalla voidaan siis avata 
 
 ## Toiminnallisuus
 
-- Binääritiedoston avaaminen
+- Binääritiedoston avaaminen (Tehty viikko 2)
 
-- Ohjelman näkyminen näytöllä
+- Ohjelman näkyminen näytöllä (Tehty viikko 3)
 
 - Ohjelmaan voi vaikuttaa näppäimistöllä
 
