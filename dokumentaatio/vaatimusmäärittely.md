@@ -9,9 +9,9 @@ nappia näppäimistöltä.
 
 ## Toiminnallisuus
 
-- Binääritiedoston avaaminen (Tehty viikko 2)
+- Binääritiedoston avaaminen (Tehty viikko 3)
 
-- Ohjelman näkyminen näytöllä <!-- (Tehty viikko 3) -->
+- Ohjelman näkyminen näytöllä <!-- (Tehty viikko 4) -->
 
 - Ohjelmaan voi vaikuttaa näppäimistöllä
 
