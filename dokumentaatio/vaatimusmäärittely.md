@@ -13,9 +13,9 @@ nappia näppäimistöltä.
 
 - Ohjelman näkyminen näytöllä <!-- (Tehty viikko 4) -->
 
-- Ohjelmaan voi vaikuttaa näppäimistöllä
+- Ohjelmaan voi vaikuttaa näppäimistöllä <!-- (Tehty viikko 5) -->
 
-- Kaikki operaatiokoodit tuetuksi, joita on 35 kpl
+- Kaikki operaatiokoodit tuetuksi, joita on 35 kpl <!-- (Tehty viikko 6) -->
 
 ## Jatkokehitysideoita
 
