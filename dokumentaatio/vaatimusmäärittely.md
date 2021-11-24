@@ -11,7 +11,7 @@ nappia näppäimistöltä.
 
 - Binääritiedoston avaaminen (Tehty viikko 3)
 
-- Ohjelman näkyminen näytöllä <!-- (Tehty viikko 4) -->
+- Ohjelman näkyminen näytöllä (Tehty viikko 4) 
 
 - Ohjelmaan voi vaikuttaa näppäimistöllä <!-- (Tehty viikko 5) -->
 
@@ -21,7 +21,7 @@ nappia näppäimistöltä.
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
 
-- Debug asioita, kuten näkyvillä olevat rekisterit
+- Debug asioita, kuten näkyvillä olevat rekisterit <!-- (Tehty viikko 7) -->
 
 - Näppäimistön rebindaus ja rebindien tallennus tietokantaan
 

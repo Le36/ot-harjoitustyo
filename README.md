@@ -1,9 +1,9 @@
 # OT-harjoitystyö #
 
-**CHIP-8** *Emulator*
+##**CHIP-8** *Emulator*
 
 Tällä hetkellä emulaattoriin implementoitu muutamat opcodet, toimii testi rom "IBM" projektin juuressa, jonka funktio on
-tulostaa näytölle IBM-logo.
+tulostaa näytölle IBM-logo. Projekti osaa tulostaa IBM-logon nyt JFX näytölle!
 
 ## Komentorivitoiminnot ##
 
@@ -12,32 +12,43 @@ tulostaa näytölle IBM-logo.
 Sovelluksen voi käynnistää komennolla
 
 ```
-mvn compile exec:java -Dexec.mainClass=com.chip8.emulator.Main
+mvn compile exec:java -Dexec.mainClass=com.chip8.Main
 ```
 
-### Testaus
+tai projektista voi tehdä .jar komennolla:
 
-Testit suoritetaan komennolla
+```
+mvn package
+```
+
+## Testaus
+
+###Testit suoritetaan komennolla
 
 ```
 mvn test
 ```
 
-Testikattavuusraportin voi luoda komennolla
+###Testikattavuusraportin voi luoda komennolla
 
 ```
 mvn test jacoco:report
 ```
 
-Kattavuusraporttia voi tarkastella projektin juuresta löytyvästä tiedostosta **target/site/jacoco/index.html** tai
-esimerkiksi Chromium-selaimessa komennolla (edellyttää Chromium-selaimen asennuksen)
+Testikattavuusraportin voi löytää polusta ***target/site/jacoco/index.html***
+
+###Checkstyle reportaasin saa seuraavalla komennolla:
 
 ```
-chromium-browser target/site/jacoco/index.html
+mvn jxr:jxr checkstyle:checkstyle
 ```
+
+Checkstyle löytyy polusta ***target/site/checkstyle.hyml***
 
 ## Dokumentaatio ##
 
 [Vaatimusmäärittely](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
 
 [Työaikakirjanpito](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+
+[Arkkitehtuurikuvaus](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
