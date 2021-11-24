@@ -23,13 +23,13 @@ mvn package
 
 # Testaus #
 
-##Testit suoritetaan komennolla##
+## Testit suoritetaan komennolla ##
 
 ```
 mvn test
 ```
 
-##Testikattavuusraportin voi luoda komennolla##
+## Testikattavuusraportin voi luoda komennolla ##
 
 ```
 mvn test jacoco:report
@@ -37,7 +37,7 @@ mvn test jacoco:report
 
 Testikattavuusraportin voi löytää polusta ***target/site/jacoco/index.html***
 
-##Checkstyle reportaasin saa seuraavalla komennolla##
+## Checkstyle reportaasin saa seuraavalla komennolla ##
 
 ```
 mvn jxr:jxr checkstyle:checkstyle
