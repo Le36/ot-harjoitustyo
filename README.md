@@ -1,13 +1,13 @@
 # OT-harjoitystyö #
 
-##**CHIP-8** *Emulator*
+**CHIP-8** *Emulator*
 
 Tällä hetkellä emulaattoriin implementoitu muutamat opcodet, toimii testi rom "IBM" projektin juuressa, jonka funktio on
 tulostaa näytölle IBM-logo. Projekti osaa tulostaa IBM-logon nyt JFX näytölle!
 
-## Komentorivitoiminnot ##
+# Komentorivitoiminnot #
 
-### Sovelluksen käynnistäminen
+## Sovelluksen käynnistäminen ##
 
 Sovelluksen voi käynnistää komennolla
 
@@ -21,15 +21,15 @@ tai projektista voi tehdä .jar komennolla:
 mvn package
 ```
 
-## Testaus
+# Testaus #
 
-###Testit suoritetaan komennolla
+##Testit suoritetaan komennolla##
 
 ```
 mvn test
 ```
 
-###Testikattavuusraportin voi luoda komennolla
+##Testikattavuusraportin voi luoda komennolla##
 
 ```
 mvn test jacoco:report
@@ -37,7 +37,7 @@ mvn test jacoco:report
 
 Testikattavuusraportin voi löytää polusta ***target/site/jacoco/index.html***
 
-###Checkstyle reportaasin saa seuraavalla komennolla:
+##Checkstyle reportaasin saa seuraavalla komennolla##
 
 ```
 mvn jxr:jxr checkstyle:checkstyle
@@ -45,7 +45,7 @@ mvn jxr:jxr checkstyle:checkstyle
 
 Checkstyle löytyy polusta ***target/site/checkstyle.hyml***
 
-## Dokumentaatio ##
+# Dokumentaatio #
 
 [Vaatimusmäärittely](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
 
