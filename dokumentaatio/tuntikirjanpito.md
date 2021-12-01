@@ -7,7 +7,10 @@
 | 23.11. | 6    | JavaFX käyttöönotto ja kuvan piirto siihen |
 | 24.11. | 9    | Testejä, opcodeja lisää, fonttien lisäys, mvn package toimiin |
 | 24.11 | 1    | Checkstyle käyttöönotto ja virheiden poistaminen |
-| yht   | 30   |
+| 30.11. | 5    | Lisätty toiminnallisuus näppäimistölle  | 
+| 01.11. | 5    | Lisätty kaikki opcodet emulaattoriin  | 
+| 01.11. | 2   | Lisätty vielä vähän testejä ja tehty release  | 
+| yht   | 42   |
 
 
 <!-- tässä on todellinen kirja tunneista, projektia tehty toiseen repoon nopeammin -->
