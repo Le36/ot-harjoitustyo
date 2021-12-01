@@ -13,15 +13,17 @@ nappia näppäimistöltä.
 
 - Ohjelman näkyminen näytöllä (Tehty viikko 4) 
 
-- Ohjelmaan voi vaikuttaa näppäimistöllä <!-- (Tehty viikko 5) -->
+- Ohjelmaan voi vaikuttaa näppäimistöllä (Tehty viikko 5)
 
-- Kaikki operaatiokoodit tuetuksi, joita on 35 kpl <!-- (Tehty viikko 6) -->
+- Kaikki operaatiokoodit tuetuksi, joita on 35 kpl (Tehty viikko 5)
+- Emulaattoriin implementoitu ääni<!-- (Tehty viikko 6) -->
 
 ## Jatkokehitysideoita
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
 
 - Debug asioita, kuten näkyvillä olevat rekisterit <!-- (Tehty viikko 7) -->
+- Disassembler, romin pausetus ja kelaus käsky kerrallaan<!-- (Tehty viikko 7) -->
 
 - Näppäimistön rebindaus ja rebindien tallennus tietokantaan
 
