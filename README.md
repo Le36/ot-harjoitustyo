@@ -2,8 +2,10 @@
 
 **CHIP-8** *Emulator*
 
-Tällä hetkellä emulaattoriin implementoitu muutamat opcodet, toimii testi rom "IBM" projektin juuressa, jonka funktio on
-tulostaa näytölle IBM-logo. Projekti osaa tulostaa IBM-logon nyt JFX näytölle!
+Chip8 emulaattori. Aja emulaattori ja valitse emulaattorin ui:ssa haluamasi rom tiedosto, joita on 
+muutama mukana projektin juuressa kansiossa /roms
+tai voit myös etsiä netistä minkä tahansa chip8 käskykannalle tehdyn romin ja se toimii tällä
+emulaattorilla!
 
 # Komentorivitoiminnot #
 
@@ -20,6 +22,9 @@ tai projektista voi tehdä .jar komennolla:
 ```
 mvn package
 ```
+
+Myös release 1 voi kokeilla ->
+[Release 1](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko5)
 
 # Testaus #
 
@@ -45,6 +50,12 @@ mvn jxr:jxr checkstyle:checkstyle
 
 Checkstyle löytyy polusta ***target/site/checkstyle.hyml***
 
+## JavaDocin saa komennolla ##
+
+```
+mvn javadoc:javadoc
+```
+
 # Dokumentaatio #
 
 [Vaatimusmäärittely](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusm%C3%A4%C3%A4rittely.md)
@@ -52,3 +63,5 @@ Checkstyle löytyy polusta ***target/site/checkstyle.hyml***
 [Työaikakirjanpito](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 [Arkkitehtuurikuvaus](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
+[Release 1](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko5)
