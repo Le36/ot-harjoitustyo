@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.util.ArrayDeque;
 
+/**
+ * memory for emulator, contains every register and ram
+ */
 @Data
 public class Memory {
 
@@ -15,52 +18,32 @@ public class Memory {
     private byte soundTimer; // 8-bit sound timer
     private ArrayDeque<Short> stack; // stack for 16-bit addresses used by 00EE and 2NNN
 
+    /**
+     * initializes 4 kB ram and sets pc to start at 0x200
+     */
     public Memory() {
         this.ram = new byte[4096];
         this.pc = 0x200; // starts at 0x200 since it's where the roms first byte is loaded in RAM
         this.v = new byte[16];
-        this.loadFontToRAM();
         this.stack = new ArrayDeque<>();
     }
 
+    /**
+     * @param address ram address to set byte content
+     * @param b byte content for ram
+     */
     public void initializeMemory(short address, byte b) {
         this.ram[address] = b;
     }
 
+    /**
+     * set value to one of 16 variable registers
+     *
+     * @param index index for register
+     * @param value value for register
+     */
     public void varReg(int index, int value) {
         this.v[index] = (byte) value;
     }
 
-    private void loadFontToRAM() {
-        int[] fontData = this.fontData();
-        short address = 0x50;
-        int pointer = 0;
-        // 16 different characters, each character 5 bytes
-        for (int i = 0; i < 16; i++) {
-            for (int j = 0; j < 5; j++, address++, pointer++) {
-                this.initializeMemory(address, (byte) fontData[pointer]);
-            }
-        }
-    }
-
-    private int[] fontData() {
-        return new int[]{
-            0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
-            0x20, 0x60, 0x20, 0x20, 0x70, // 1
-            0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
-            0xF0, 0x10, 0xF0, 0x10, 0xF0, // 3
-            0x90, 0x90, 0xF0, 0x10, 0x10, // 4
-            0xF0, 0x80, 0xF0, 0x10, 0xF0, // 5
-            0xF0, 0x80, 0xF0, 0x90, 0xF0, // 6
-            0xF0, 0x10, 0x20, 0x40, 0x40, // 7
-            0xF0, 0x90, 0xF0, 0x90, 0xF0, // 8
-            0xF0, 0x90, 0xF0, 0x10, 0xF0, // 9
-            0xF0, 0x90, 0xF0, 0x90, 0x90, // A
-            0xE0, 0x90, 0xE0, 0x90, 0xE0, // B
-            0xF0, 0x80, 0x80, 0x80, 0xF0, // C
-            0xE0, 0x90, 0x90, 0x90, 0xE0, // D
-            0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
-            0xF0, 0x80, 0xF0, 0x80, 0x80  // F
-        };
-    }
 }

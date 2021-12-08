@@ -16,17 +16,17 @@ nappia näppäimistöltä.
 - Ohjelmaan voi vaikuttaa näppäimistöllä (Tehty viikko 5)
 
 - Kaikki operaatiokoodit tuetuksi, joita on 35 kpl (Tehty viikko 5)
-- Emulaattoriin implementoitu ääni<!-- (Tehty viikko 6) -->
+- Emulaattoriin implementoitu ääni (Tehty viikko 6) 
 
 ## Jatkokehitysideoita
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
 
-- Debug asioita, kuten näkyvillä olevat rekisterit <!-- (Tehty viikko 7) -->
-- Disassembler, romin pausetus ja kelaus käsky kerrallaan<!-- (Tehty viikko 7) -->
+- Debug asioita, kuten näkyvillä olevat rekisterit (Tehty viikko 6)
+- Disassembler, romin pausetus ja kelaus käsky kerrallaan (Tehty viikko 6)
 
 - Näppäimistön rebindaus ja rebindien tallennus tietokantaan
 
-- Käyttäjälle mahdollisuus skaalata näyttöä
+- Käyttäjälle mahdollisuus skaalata näyttöä (Tehty viikko 6) 
 
 
