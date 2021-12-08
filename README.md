@@ -7,6 +7,8 @@ muutama mukana projektin juuressa kansiossa /roms
 tai voit myös etsiä netistä minkä tahansa chip8 käskykannalle tehdyn romin ja se toimii tällä
 emulaattorilla!
 
+![kohje1.1](/dokumentaatio/kuvat/kohje1.1.png)
+
 # Komentorivitoiminnot #
 
 ## Sovelluksen käynnistäminen ##
