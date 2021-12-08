@@ -16,7 +16,7 @@ riitä kuvaamaan sovelluksen rakennetta:
 Nyt kun ohjelman rakenne on jo paljon paremmin selvillä, voimme alkaa tutustumaan hieman yksittäisiin luokkiin 
 ja niiden välisiin yhteyksiin.
 
-### Executer ###
+### Emulaattori ###
 
 Executer toimii emulaattorin main luokkana. Se pystyy pyörittämään emulaattoria ja emulaattorin 
 logiikka onkin eriytetty käyttöliittymästä siihen malliin, että käyttöliittymän tarvii koskea emulaattoriin 
@@ -40,3 +40,16 @@ Hyvin yksinkertainen sovelluslogiikka siis käytössä, jonka vuoksi toimintaa e
 Näin pienessä projektissa asiat on pitää kivana, kun pakkauksia ei ole yli kymmentä ja class counttikin pysyy mukavasti alle 
 sadassa.
 
+### Käyttöliittymä ###
+
+Tutustutaan seuraavaksi käyttöliittymään ja kuinka se on yhteydessä emulaattoriin:
+
+![sekvenssidiagrami2](/dokumentaatio/kuvat/sequenceLauncher.png)
+
+Ohjelma siis ensin luo Launcher -luokan jossa tehdään käyttöliittymän rakentava toiminta JFX avulla. Tämän 
+jälkeen odotetaan käyttäjän reagointia, eli valitaanko mikä tila emulaattoriin (laajennettu vai normaali) ja 
+sitten mennään EmulatorUi -luokkaan, jossa on aiempien valintojen mukainen käyttäliittymän rakentaminen JFX avulla.
+
+Miten tämä sitten liittyy emulaattoriin? Luomme täällä Executer -luokkaa varten PixelManager -luokan, joka huolehtii 
+pikseleistä ja niiden haihdutuksesta. Seuraavaksi Keys -luokka, joka huolehtii näppäimistön toiminnallisuudesta ja sen 
+siirtämisestä Executer -luokan kautta syvemmälle emulaattoriin.
