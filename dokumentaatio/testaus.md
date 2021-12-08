@@ -29,4 +29,14 @@ sekä Linux- että Windows-käyttöympäristöissä. Käyttöohjeen mukaiset til
 
 Käyttöohjeesta oli jätetty pois emulaattorin laajennetun tilan käyttö, koska sitä tilaa käyttämällä 
 on mahdollista aiheuttaa virheitä pakottamalla opcodeja. Tämä ei kuitenkaan tarkoita sitä, että emulaattorin 
-koodissa olisi virhe, vaan ROM:in koodissa, jonka koodaukseen tässä projektissa ei oteta huomiota.
+koodissa olisi virhe, vaan ROM:in koodissa, jonka koodaukseen tässä projektissa ei oteta huomiota. Onhan 
+virheitä mahdollista saada aikaan Javassa, vaikka Javan koodi olisikin toimivaa, vika voisi olla 
+silloin ohjelmoijassa.
+
+### Jääneitä laatuongelmia ###
+
+- Sovellus voisi antaa ilmoituksen keskeytyksestä myös käyttöliittymässä, mutta normaalissa käytössä 
+näitä ei pääse syntymään toisaalta.
+
+- Muissa kuin Windows ympäristöissä CSS-tiedostojen määrittelemä Consolas-fontti ei ole saatavilla, jolloin 
+järjestelmä käyttää tilalla oletusfonttia. 
