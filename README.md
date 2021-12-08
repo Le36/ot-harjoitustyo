@@ -64,6 +64,8 @@ mvn javadoc:javadoc
 
 [Arkkitehtuurikuvaus](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+
 [Release 1](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko5)
 
 [Release 2](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko6)
