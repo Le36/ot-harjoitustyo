@@ -23,8 +23,8 @@ tai projektista voi tehdä .jar komennolla:
 mvn package
 ```
 
-Myös release 1 voi kokeilla ->
-[Release 1](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko5)
+Myös release 2 voi kokeilla ->
+[Release 2](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko6)
 
 # Testaus #
 
@@ -65,3 +65,5 @@ mvn javadoc:javadoc
 [Arkkitehtuurikuvaus](https://github.com/Le36/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 [Release 1](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko5)
+
+[Release 2](https://github.com/Le36/ot-harjoitustyo/releases/tag/viikko6)
