@@ -19,7 +19,7 @@ ja niiden välisiin yhteyksiin.
 ### Emulaattori ###
 
 Executer toimii emulaattorin main luokkana. Se pystyy pyörittämään emulaattoria ja emulaattorin 
-logiikka onkin eriytetty käyttöliittymästä siihen malliin, että käyttöliittymän tarvii koskea emulaattoriin 
+logiikka onkin eriytetty käyttöliittymästä siihen malliin, että käyttöliittymän tarvi koskea emulaattoriin 
 käytännössä vain Executer -luokan kautta.
 
 ![sekvenssidiagrami](/dokumentaatio/kuvat/sequenceExecuter.png)
@@ -30,7 +30,7 @@ jossa on kaikki sille tarpeellinen samassa luokassa. Memory alustetaan Loader -l
 esimerkiksi käyttäjän valitseman ROM:in tiedostosta ja samalla Chip-8:lle pakolliset kovakoodatut fontti datat.
 
 Kun tämä on tehty, tekee Executer meille Fetcherin, jonka funktio on noutaa seuraava käsky program counterin osoittamasta 
-paikasta keskusmuistista, joka sijaitsee Memory -luokassa. Fetcherin jälkeen luomme Executer -luokas luokan Decoder, jonka 
+paikasta keskusmuistista, joka sijaitsee Memory -luokassa. Fetcherin jälkeen luomme Executer -luokassa luokan Decoder, jonka 
 tehtävä on purkaa Fetcherin noutama käsky ja tehdä sen mukaiset toimenpiteet. Decoder -luokka on yhteydessä 
 käyttöliittymään siinä mielessä, että se piirtää sinne kuvaa ConsoleDisplay -luokassa ja myöhemmin vielä tekee 
 emulaattorin laajennettuun tilaan Extended DecodeDetails -luokan, joka kuvailee jokaista käskyä yksityiskohtaisesti 
@@ -52,4 +52,5 @@ sitten mennään EmulatorUi -luokkaan, jossa on aiempien valintojen mukainen kä
 
 Miten tämä sitten liittyy emulaattoriin? Luomme täällä Executer -luokkaa varten PixelManager -luokan, joka huolehtii 
 pikseleistä ja niiden haihdutuksesta. Seuraavaksi Keys -luokka, joka huolehtii näppäimistön toiminnallisuudesta ja sen 
-siirtämisestä Executer -luokan kautta syvemmälle emulaattoriin.
+siirtämisestä Executer -luokan kautta syvemmälle emulaattoriin. Myös Executer -luokka luodaan täällä, mutta sen voisi 
+luoda myös yhtä hyvin esim. main luokassa, jolloin ui:n voisi ohittaa täysin.
