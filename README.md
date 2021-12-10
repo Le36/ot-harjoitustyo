@@ -1,11 +1,11 @@
-# OT-harjoitystyö #
+# **CHIP-8** *Emulator* #
 
-**CHIP-8** *Emulator*
+Chip-8 emulaattori, tehty Helsingin Yliopiston kurssin Ohjelmistotekniikka kurssityönä.
+Chip-8 mielletään yleisesti "Hello World" -emulaattoriksi, sillä se on hyvin yksinkertainen, 
+sisältäen vain 35 erilaista käskyä ja mustavalkoisen näytön resoluutiolla 64x32.
 
-Chip8 emulaattori. Aja emulaattori ja valitse emulaattorin ui:ssa haluamasi rom tiedosto, joita on 
-muutama mukana projektin juuressa kansiossa /roms
-tai voit myös etsiä netistä minkä tahansa chip8 käskykannalle tehdyn romin ja se toimii tällä
-emulaattorilla!
+Tähän emulaattoriin on kuitenkin pyritty lisäilemään paljon muitakin ominaisuuksia, kuin pelkästään 
+Chip-8:lle tehdyn ROM:in tulkitseminen:
 
 ![kohje1.1](/dokumentaatio/kuvat/kohje1.1.png)
 
