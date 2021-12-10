@@ -22,7 +22,7 @@ Executer toimii emulaattorin main luokkana. Se pystyy pyörittämään emulaatto
 logiikka onkin eriytetty käyttöliittymästä siihen malliin, että käyttöliittymän tarvi koskea emulaattoriin 
 käytännössä vain Executer -luokan kautta.
 
-![sekvenssidiagrami](/dokumentaatio/kuvat/sequenceExecuter.png)
+![sekvenssidiagrami](/dokumentaatio/kuvat/sequenceExecute.png)
 
 Kun Executer luodaan, se luo meille emulaattoriin muistin jota käyttää. Muisti on Memory -luokka. Memory on 
 kuitenkin tavallaan vain tyhmää muistia, se ei osaa tehdä mitään, se on käytännössä emulaattorin käyttämä tietorakenne 
