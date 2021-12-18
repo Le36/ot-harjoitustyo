@@ -14,4 +14,7 @@
 | 7.12. | 5    | JFX käyttää nyt CSS tiedostoja, lisätty disassembler  |
 | 7.11. | 4    | Lisätty näkymä nykyisen käskyn informatiolle, steppien kelaus ja ohitus  |
 | 8.11. | 5    | tehty erillinen launcheri, resoluution valinta, äänen lisäys  |
-| yht   | 63 |
+| 16.11. | 5    | lisätty options menu  |
+| 17.11. | 5    | näppäimien rebind, värin vaihto ym.  |
+| 18.11. | 5    | pysyväistallennus tiedostoon  |
+| yht   | 78 |

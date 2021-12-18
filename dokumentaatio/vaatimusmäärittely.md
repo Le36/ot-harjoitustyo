@@ -10,11 +10,8 @@ nappia näppäimistöltä.
 ## Toiminnallisuus
 
 - Binääritiedoston avaaminen (Tehty viikko 3)
-
-- Ohjelman näkyminen näytöllä (Tehty viikko 4) 
-
+- Ohjelman näkyminen näytöllä (Tehty viikko 4)
 - Ohjelmaan voi vaikuttaa näppäimistöllä (Tehty viikko 5)
-
 - Kaikki operaatiokoodit tuetuksi, joita on 35 kpl (Tehty viikko 5)
 - Emulaattoriin implementoitu ääni (Tehty viikko 6) 
 
@@ -24,9 +21,6 @@ Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seura
 
 - Debug asioita, kuten näkyvillä olevat rekisterit (Tehty viikko 6)
 - Disassembler, romin pausetus ja kelaus käsky kerrallaan (Tehty viikko 6)
-
-- Näppäimistön rebindaus ja rebindien tallennus tietokantaan
-
-- Käyttäjälle mahdollisuus skaalata näyttöä (Tehty viikko 6) 
-
-
+- Näppäimistön rebindaus ja rebindien tallennus tiedostoon (Tehty viikko 7)
+- Käyttäjälle mahdollisuus skaalata näyttöä (Tehty viikko 6)
+- Emulaattorin värien vaihto ja tallennus tiedostoon (Tehty viikko 7)
