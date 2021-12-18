@@ -113,7 +113,7 @@ suoritettavaa ROM:ia.
 
 Avaa uuden ikkunan jossa on lisää erilaisia konfiguroitavia asioita.
 
-![kohje5](/dokumentaatio/kuvat/kohje6.png)
+![kohje6](/dokumentaatio/kuvat/kohje6.png)
 
 Ensimmäinen ominaisuus on näppäimien rebindaus. Klikkaa painiketta jonka haluat rebindata, jonka 
 jälkeen paina näppäimistöllä painiketta johon haluat asettaa sen.
