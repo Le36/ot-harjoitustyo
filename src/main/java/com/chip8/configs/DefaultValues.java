@@ -24,7 +24,7 @@ public class DefaultValues {
         this.mouseKbLayout = "123C456D789EA0BF";
         this.bgColor = "0x000000";
         this.spriteColor = "0xFFFFFF";
-        this.printSymbol = "█#";
+        this.printSymbol = "#3";
         this.printToConsole = false;
         this.disableUiUpdates = false;
     }

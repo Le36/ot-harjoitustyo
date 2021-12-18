@@ -5,17 +5,17 @@ paljon käsin etenkin sen käyttöliittymästä tehtäviä toimintoja.
 
 ### Yksikkö- ja integraatiotestaus ###
 
-Ohjelmassa on kaksi testiluokkaa, nämä ovat DecoderTest ja FetcherTest. Niillä testataan 
-esimerkiksi kaikki opcodet ja myös käskyn noutaminen keskusmuistista.
+Ohjelmassa on useita testiluokkia, jotka testaavat emulaattorin kannalta oleellista toimintaa. Tämän lisäksi on yksi 
+testiluokka tehty pysyväistallennuksen testausta varten.
 
 ### Testikattavuus ###
 
 Testikattavuudessa ei ole huomioitu käyttöliittymän rakentavaa koodia. Testien rivikattavuus on huimat 
-86% ja haarautumiskattavuus 72%.
+96% ja haarautumiskattavuus 92%.
 
 Kaikkea ei ole testattu siis ohjelmastakaan, näihin liittyvät esimerkiksi. käyttöliittymästä käytettävä 
 näppäimistö, jonka voisi myös ehkä excludee tästä kattavuusmittauksesta samoin pikseleiden piirtoon 
-liittyvät luokat, nämä excludemalla rivi- ja haarautumiskattavuus olisivat 95% luokkaa.
+liittyvät luokat, nämä excludemalla rivi- ja haarautumiskattavuus olisivat 99% luokkaa.
 
 Myös esimerkiksi operaatiokoodi Random() on jätetty testaamatta, koska satunnaisuutta on turha testata 
 mielestäni tässä yhteydessä.

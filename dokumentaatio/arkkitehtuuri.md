@@ -54,3 +54,25 @@ Miten tämä sitten liittyy emulaattoriin? Luomme täällä Executer -luokkaa va
 pikseleistä ja niiden haihdutuksesta. Seuraavaksi Keys -luokka, joka huolehtii näppäimistön toiminnallisuudesta ja sen 
 siirtämisestä Executer -luokan kautta syvemmälle emulaattoriin. Myös Executer -luokka luodaan täällä, mutta sen voisi 
 luoda myös yhtä hyvin esim. main luokassa, jolloin ui:n voisi ohittaa täysin.
+
+Käyttöliittymässä on lisäksi erillinen "Options" jfx stage, jossa voidaan hallita emulaattorin kannalta 
+pysyväistallennukseen liittyviä toiminnallisuuksia kuten näppäimien rebindaus ja emulaattorin 
+värien vaihtaminen.
+
+### Konfiguraatio ###
+
+Sovellusta voi myös vähän konfiguroida käyttöliittymästä käsin. Konfiguraatio on myös mahdollista 
+pysyväistallettaa tiedostoon. Jos näin halutaan tehdä, luo emulaattori "chip-configs.txt" nimisen 
+tiedoston, johon erilaiset tiedot tallentuvat. Muutokset voidaan myös tehdä ilman, että luodaan 
+pysyvää tiedostoa. Silloin sovelluksen avautuessa uudelleen, ovat paikalla tosin default arvot.
+
+![konfigurati](/dokumentaatio/kuvat/configs.png)
+
+Mahdollisia tietoja joita voidaan tallentaa ja muokata:
+
+- Näppäimistön rebindaus
+- Spriten väri
+- Taustan väri
+- ROM tulostus consoleen
+- Tulostettava symboli
+- Käyttöliittymän päivityksen keskeytys

@@ -62,6 +62,7 @@ näppäimistönä toimivat seuraavat napit:
 
 Näppäimet tulevat siitä, kun Chip-8 käyttää 4x4 keypadia.
 Laajennetussa tilassa on myös näppäimistö, jota voi käyttää hiirellä klikkaillen.
+Näppäimiä voi myös rebindailla options valikosta.
 
 Näillä ohjeilla ROM pitäisi nyt olla käynnissä emulaattorissa ja sitä voi käyttää näppäimistöllä.
 
@@ -107,3 +108,19 @@ saadaan parhain mahdollinen lopputulos.
 
 Tällä liukurilla voimme vaikuttaa ROM:in suorituksen nopeuteen, eli sillä voidaan nopeuttaa tai hidastaa 
 suoritettavaa ROM:ia. 
+
+### Options ###
+
+Avaa uuden ikkunan jossa on lisää erilaisia konfiguroitavia asioita.
+
+![kohje5](/dokumentaatio/kuvat/kohje6.png)
+
+Ensimmäinen ominaisuus on näppäimien rebindaus. Klikkaa painiketta jonka haluat rebindata, jonka 
+jälkeen paina näppäimistöllä painiketta johon haluat asettaa sen.
+
+On myös mahdollista vaihtaa emulaattorin spriten ja taustan värejä. Lisäksi on mahdollista 
+tulostaa ROM suoraan consoleen vapaasti valittavalla symbolilla. Samoin mahdollisuus 
+pysäyttää käyttöliittymän päivitykset.
+
+Set default painike asettaa kaiken oletusarvoihin. Save changes tallentaa arvot tiedostoon.
+Lopulta apply changes ottaa muutokset käyttöön, tallentamatta niitä tiedostoon.
