@@ -1,5 +1,6 @@
 package com.chip8.ui;
 
+import com.chip8.configs.Configs;
 import com.chip8.emulator.Executer;
 import com.chip8.emulator.Keys;
 import com.chip8.emulator.PixelManager;
@@ -20,6 +21,9 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 
+/**
+ * emulators main ui scene
+ */
 public class EmulatorUi extends Stage {
 
     private Executer executer;
@@ -29,6 +33,12 @@ public class EmulatorUi extends Stage {
     final int width = 64;
     final int height = 32;
 
+    /**
+     * generates ui for emulator
+     *
+     * @param mode  if using the extended or normal mode
+     * @param scale scale for drawing the emulator display
+     */
     EmulatorUi(boolean mode, int scale) {
         UiElements uiElements = new UiElements();
 
@@ -36,6 +46,7 @@ public class EmulatorUi extends Stage {
         PixelManager pixels = new PixelManager(width, height);
         FileChooser fileChooser = new FileChooser();
         Keys keys = new Keys();
+        Configs configs = new Configs();
         Border border = new Border(new BorderStroke(Color.rgb(35, 255, 0),
                 BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT));
 
@@ -47,15 +58,16 @@ public class EmulatorUi extends Stage {
         ToggleButton pause = uiElements.makeToggleButton("Pause ROM");
         Button nextStep = uiElements.makeButton("Next Instruction");
         ToggleButton fadeButton = uiElements.makeToggleButton("Fade On");
+        Button options = uiElements.makeButton("Options");
 
-        Slider fadeSlider = uiElements.makeSlider(0.0001, 0.3, 0.1);
-        Slider slider = uiElements.makeSlider(1, 20, 1);
+        Slider fadeSlider = uiElements.makeSlider(0.0001, 0.05, 0.05);
+        Slider slider = uiElements.makeSlider(-20, 20, 1);
         Label gameSpeedLabel = uiElements.makeLabel("ROM Speed: ", LabelType.TOOLBAR);
         Label fadeSpeedLabel = uiElements.makeLabel("Fade Speed: ", LabelType.TOOLBAR);
 
-        HBox hboxLeft = new HBox(4, selectRom, resetRom, pause, nextStep, fadeButton);
+        HBox hboxLeft = new HBox(4, selectRom, resetRom, pause, nextStep, fadeButton, options);
         HBox hboxRight = new HBox(4, fadeSpeedLabel, fadeSlider, gameSpeedLabel, slider);
-        HBox hbox = new HBox(165, hboxLeft, hboxRight);
+        HBox hbox = new HBox(105, hboxLeft, hboxRight);
         ToolBar toolBar = new ToolBar();
         toolBar.getItems().add(hbox);
         toolBar.getStylesheets().add("toolbar.css");
@@ -157,8 +169,9 @@ public class EmulatorUi extends Stage {
 
         selectRom.setOnAction(e -> {
             selectedFile = fileChooser.showOpenDialog(this);
-            if (selectedFile == null || selectedFile.length() > 4096 || selectedFile.length() < 2) return;
-            this.executer = new Executer(selectedFile.getAbsolutePath(), pixels, keys);
+            // 4096 total memory, - 512 reserved = 3584 max
+            if (selectedFile == null || selectedFile.length() > 3584 || selectedFile.length() < 2) return;
+            this.executer = new Executer(selectedFile.getAbsolutePath(), pixels, keys, configs);
             fileChosen = true;
             pixels.clearDisplay();
             hexDumpArea.setText(executer.getLoader().hexDump());
@@ -167,7 +180,7 @@ public class EmulatorUi extends Stage {
 
         resetRom.setOnAction(e -> {
             if (selectedFile == null) return;
-            this.executer = new Executer(selectedFile.getAbsolutePath(), pixels, keys);
+            this.executer = new Executer(selectedFile.getAbsolutePath(), pixels, keys, configs);
             fileChosen = true;
             pixels.clearDisplay();
         });
@@ -192,6 +205,10 @@ public class EmulatorUi extends Stage {
                 fadeButton.setText("Fade Off");
                 pixels.setFade(false);
             }
+        });
+
+        options.setOnAction(e -> {
+            new Options(keys, romDisplay, configs);
         });
 
         forceOpcodeButton.setOnAction(e -> {
@@ -234,10 +251,15 @@ public class EmulatorUi extends Stage {
         new Thread(() -> {
             while (true) {
                 try {
-                    Thread.sleep(1);
-                    if (!pause.isSelected() && fileChosen) {
-                        for (int i = 0; i < gameSpeed; i++) {
-                            executer.execute();
+                    if (gameSpeed <= 0) {
+                        Thread.sleep((long) Math.max(1, Math.abs(gameSpeed)));
+                        if (!pause.isSelected() && fileChosen) executer.execute();
+                    } else {
+                        Thread.sleep(1);
+                        if (!pause.isSelected() && fileChosen) {
+                            for (int i = 0; i < gameSpeed; i++) {
+                                executer.execute();
+                            }
                         }
                     }
                 } catch (InterruptedException ex) {
@@ -248,24 +270,28 @@ public class EmulatorUi extends Stage {
                     pixels.setFadeSpeed(fadeSlider.getValue());
 
                     romDisplay.setFadeSelected(!fadeButton.isSelected());
-                    romDisplay.draw();
-                    if (mode) spriteDisplay.draw();
+                    if (!configs.isDisableUiUpdates()) {
+                        romDisplay.draw();
+                        if (mode) spriteDisplay.draw();
 
-                    pixels.fade(); // fades all pixels that have been erased
+                        pixels.fade(); // fades all pixels that have been erased
 
-                    if (!fileChosen) return;
-                    if (executer.getMemory().getSoundTimer() != (byte) 0x0) {
-                        mediaPlayer.stop();
-                        mediaPlayer.play();
-                    }
-
-                    if (mode) {
-                        updateLabels(currentInstruction, indexRegister, programCounter, delayTimer, soundTimer, registerLabels, currentDetailed, stackSize, stackPeek);
-                        disassembler.update(executer.getMemory().getPc(), executer.getFetcher());
-
-                        if (ignoreDelay.isSelected()) {
-                            executer.getMemory().setDelayTimer((byte) 0);
+                        if (!fileChosen) return;
+                        if (executer.getMemory().getSoundTimer() != (byte) 0x0) {
+                            mediaPlayer.stop();
+                            mediaPlayer.play();
                         }
+
+                        if (mode) {
+                            updateLabels(currentInstruction, indexRegister, programCounter, delayTimer, soundTimer, registerLabels, currentDetailed, stackSize, stackPeek);
+                            disassembler.update(executer.getMemory().getPc(), executer.getFetcher());
+
+                            if (ignoreDelay.isSelected()) {
+                                executer.getMemory().setDelayTimer((byte) 0);
+                            }
+                        }
+                    } else {
+                        romDisplay.uiUpdatesDisabled();
                     }
                 });
             }
@@ -318,7 +344,7 @@ public class EmulatorUi extends Stage {
         stackSize.setText("Stack size: " + executer.getMemory().getStack().size());
         try {
             stackPeek.setText("Stack peek: 0x" + Integer.toHexString(executer.getMemory().getStack().peek() & 0xFFFF).toUpperCase());
-        } catch (NullPointerException ex) {
+        } catch (NullPointerException ignored) {
             stackPeek.setText("Stack peek: empty");
         }
         for (int i = 0; i < 16; i++) {

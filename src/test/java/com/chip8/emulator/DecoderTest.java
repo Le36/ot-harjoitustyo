@@ -3,6 +3,7 @@ package com.chip8.emulator;
 
 import static org.junit.Assert.*;
 
+import com.chip8.configs.Configs;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,7 @@ public class DecoderTest {
         this.keys = new Keys();
         new Loader("noFileHere", m).loadFontToRAM();
         this.fetcher = new Fetcher(m);
-        this.decoder = new Decoder(m, fetcher, new PixelManager(64, 32), keys);
+        this.decoder = new Decoder(m, fetcher, new PixelManager(64, 32), keys, new Configs());
     }
 
     @Test
@@ -293,6 +294,10 @@ public class DecoderTest {
         decoder.decode((short) 0x00EE);
         assertEquals(0, m.getStack().size());
         assertEquals(0x502, m.getPc());
+
+        // no exception even when trying for empty stack
+        decoder.decode((short) 0x00EE);
+        assertEquals("Error:\n00EE instruction, but stack is empty!", decoder.getDetailed());
     }
 
     @Test

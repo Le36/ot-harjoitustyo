@@ -2,6 +2,9 @@ package com.chip8.emulator;
 
 import lombok.Data;
 
+/**
+ * allows printing of the emulator display to console
+ */
 @Data
 public class ConsoleDisplay {
 
@@ -13,19 +16,27 @@ public class ConsoleDisplay {
         this.display = new boolean[width][height];
     }
 
-    public void printDisplay() {
+    /**
+     * print rom display to console
+     */
+    public void printDisplay(String symbol) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (this.display[j][i]) {
-                    System.out.print("X");
+                    System.out.print(symbol);
                 } else {
-                    System.out.print(" ");
+                    for (int n = 0; n < symbol.length(); n++) {
+                        System.out.print(" ");
+                    }
                 }
             }
             System.out.println();
         }
     }
 
+    /**
+     * clears the display
+     */
     public void clearDisplay() {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
